@@ -1,15 +1,7 @@
-// Завдання:
-// Функція getFirstElement приймає масив і повертає його перший елемент.
-
-// 1 Зроби функцію узагальненою, використовуючи тип T, щоб вона працювала з масивами будь-якого типу.
-// 2 Додай явну типізацію дженериків у виклики функцій.
-// 3 Переконайся, що тип елемента, який повертається, точно відповідає типу елементів у масиві.
-// 4 Перевір, що TypeScript не дозволяє передати масив змішаних типів без відповідного типу.
-
 function getFirstElement<T>(arr: T[]): T {
   return arr[0];
 }
 
-getFirstElement([1, 2, 3]); // 1
-getFirstElement(['a', 'b', 'c']); // "a"
-getFirstElement([true, false, true]); // true
+getFirstElement<number>([1, 2, 3]); // 1
+getFirstElement<string>(['a', 'b', 'c']); // "a"
+getFirstElement<boolean>([true, false, true]); // true
